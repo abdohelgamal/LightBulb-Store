@@ -22,7 +22,7 @@ class OrderDialog extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional.topStart,
+                alignment: AlignmentDirectional.topEnd,
                 child: IconButton(
                     onPressed: () {
                       Navigator.pop(context);

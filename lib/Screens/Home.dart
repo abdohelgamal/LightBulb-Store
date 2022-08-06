@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:store_app/Components/AppBar.dart';
-import 'package:store_app/Components/ListViewItem.dart';
+import 'package:store_app/Components/HomeListViewItem.dart';
 
 class Home extends StatefulWidget {
- const Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -30,32 +30,36 @@ class _HomeState extends State<Home> {
           items: [
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  'assets/more.svg',
-                  height: 25,
+                  'assets/home.svg',
+                  height: 20,
+                  width: 20,
                   color: bttmindex == 0 ? Color(0xFF0059A7) : Colors.black,
                 ),
-                label: 'المزيد'),
-            BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/profile.svg',
-                  height: 25,
-                  color: bttmindex == 1 ? Color(0xFF0059A7) : Colors.black,
-                ),
-                label: 'حسابي'),
+                label: 'الرئيسية'),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   'assets/discount.svg',
-                  height: 25,
-                  color: bttmindex == 2 ? Color(0xFF0059A7) : Colors.black,
+                  height: 20,
+                  width: 20,
+                  color: bttmindex == 1 ? Color(0xFF0059A7) : Colors.black,
                 ),
                 label: 'العروض'),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  'assets/home.svg',
-                  height: 25,
+                  'assets/profile.svg',
+                  height: 20,
+                  width: 20,
+                  color: bttmindex == 2 ? Color(0xFF0059A7) : Colors.black,
+                ),
+                label: 'حسابي'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  'assets/more.svg',
+                  height: 15,
+                  width: 15,
                   color: bttmindex == 3 ? Color(0xFF0059A7) : Colors.black,
                 ),
-                label: 'الرئيسية')
+                label: 'المزيد')
           ]),
       resizeToAvoidBottomInset: true,
       appBar: MyAppBar(),
@@ -65,16 +69,16 @@ class _HomeState extends State<Home> {
         children: [
           Row(
             children: [
-              Text(
-                'اعلان',
-                style: TextStyle(color: Color(0xFFFF0000)),
-              ),
               Container(
                 height: 7,
                 width: 7,
                 margin: const EdgeInsets.symmetric(horizontal: 3),
                 decoration: BoxDecoration(
                     shape: BoxShape.circle, color: Color(0xFFFF0000)),
+              ),
+              Text(
+                'اعلان',
+                style: TextStyle(color: Color(0xFFFF0000)),
               )
             ],
             mainAxisAlignment: MainAxisAlignment.center,
@@ -87,11 +91,11 @@ class _HomeState extends State<Home> {
             height: 40,
           ),
           Align(
-            alignment: AlignmentDirectional.centerEnd,
+            alignment: AlignmentDirectional.centerStart,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'الخدمات الشخصية',
@@ -107,8 +111,8 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.symmetric(vertical: 15),
                         itemExtent: 92,
                         scrollDirection: Axis.horizontal,
-                        children:
-                            List.generate(10, (index) => const ListviewItem()),
+                        children: List.generate(
+                            10, (index) => const HomeListviewItem()),
                       )),
                   Align(
                     alignment: Alignment.center,
@@ -132,8 +136,8 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.only(top: 15),
                         itemExtent: 92,
                         scrollDirection: Axis.horizontal,
-                        children:
-                            List.generate(10, (index) => const ListviewItem()),
+                        children: List.generate(
+                            10, (index) => const HomeListviewItem()),
                       )),
                   SizedBox(
                       height: 145,
@@ -141,8 +145,8 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.only(bottom: 15),
                         itemExtent: 92,
                         scrollDirection: Axis.horizontal,
-                        children:
-                            List.generate(10, (index) => const ListviewItem()),
+                        children: List.generate(
+                            10, (index) => const HomeListviewItem()),
                       )),
                   Container(
                     height: 100,

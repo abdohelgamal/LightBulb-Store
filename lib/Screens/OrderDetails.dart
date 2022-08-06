@@ -63,7 +63,7 @@ class OrderDetails extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(25, 30, 25, 0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'تفاصيل الاعلان',
@@ -73,7 +73,7 @@ class OrderDetails extends StatelessWidget {
                       //TODO: add counter text
                       height: 160,
                       child: TextField(
-                        textAlign: TextAlign.end,
+                        textAlign: TextAlign.start,
                         maxLines: 8,
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.symmetric(
@@ -104,7 +104,7 @@ class OrderDetails extends StatelessWidget {
                                 BoxConstraints.tightForFinite(),
                             suffixIconConstraints:
                                 BoxConstraints.tightForFinite(),
-                            prefixIcon: Padding(
+                            suffixIcon: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 'تعديل',
@@ -112,7 +112,7 @@ class OrderDetails extends StatelessWidget {
                                     color: Color(0xFF70BCFF), fontSize: 10),
                               ),
                             ),
-                            suffixIcon: Padding(
+                            prefixIcon: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SvgPicture.asset(
                                 'assets/locationConfirm.svg',
@@ -141,8 +141,11 @@ class OrderDetails extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(0),
                                 borderSide:
                                     BorderSide(color: Color(0xFFCECECE))))),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 75),
+               Padding(
+                 padding:const EdgeInsets.only(top: 40),
+                 child: Text('تحديد السعر'),
+               ),     Padding(
+                      padding: const EdgeInsets.only(bottom: 75),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -152,7 +155,7 @@ class OrderDetails extends StatelessWidget {
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 decoration: InputDecoration(
-                                    hintText: 'الي',
+                                    hintText: 'من',
                                     hintStyle: TextStyle(
                                         fontSize: 10, color: Color(0xFFCECECE)),
                                     border: OutlineInputBorder(
@@ -172,7 +175,7 @@ class OrderDetails extends StatelessWidget {
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 decoration: InputDecoration(
-                                    hintText: 'من',
+                                    hintText: 'الي',
                                     hintStyle: TextStyle(
                                         fontSize: 10, color: Color(0xFFCECECE)),
                                     border: OutlineInputBorder(
@@ -187,7 +190,7 @@ class OrderDetails extends StatelessWidget {
                     ),
                     Text(
                       'لوريم ايبسوم دولار سيت أميت \n كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور \n أنكايديديونتيوت لابوري ات دولار ماجنا أليكيو \n يوت انيم أد مينيم فينايم,كيواس نوستريد',
-                      textAlign: TextAlign.end,
+                      textAlign: TextAlign.start,
                     )
                   ],
                 ),

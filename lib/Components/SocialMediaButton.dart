@@ -22,17 +22,17 @@ class SocialMediaButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+           SvgPicture.asset(svgPath) ,
+            SizedBox(
+              width: 16,
+            ),
             Text(
               text,
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
                   fontSize: 15),
-            ),
-            SizedBox(
-              width: 16,
-            ),
-            SvgPicture.asset(svgPath)
+            )
           ],
         ),
       ),

@@ -53,7 +53,7 @@ class _ChoosLocationState extends State<ChoosLocation> {
                 mapIsLoading: Center(
                   child: SpinKitDoubleBounce(
                       duration: Duration(milliseconds: 700),
-                      color: Colors.redAccent),
+                      color: Color.fromARGB(255, 62, 130, 163)),
                 ),
                 controller: controller,
               ),
@@ -73,11 +73,11 @@ class _ChoosLocationState extends State<ChoosLocation> {
                       childWidget: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(),
-                          Text(
+                         
+                        SvgPicture.asset('assets/locationConfirm.svg'),   Text(
                             'تأكيد العنوان',
                           ),
-                          SvgPicture.asset('assets/locationConfirm.svg'),
+                          SizedBox(),
                         ],
                       ),
                     ),
@@ -98,11 +98,11 @@ class _ChoosLocationState extends State<ChoosLocation> {
                       childWidget: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(),
+                          SvgPicture.asset('assets/twoarrowscircle.svg'),
                           Text(
                             'إعادة ضبط الموقع تلقائي',
                           ),
-                          SvgPicture.asset('assets/twoarrowscircle.svg'),
+                          SizedBox(),
                         ],
                       ),
                     )

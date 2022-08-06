@@ -10,7 +10,7 @@ class PhoneCodeEntry extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.symmetric(
@@ -61,8 +61,8 @@ class PhoneCodeEntry extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                      suffixIcon: IconButton(
-                        icon: const Icon(Icons.close),
+                      prefixIcon: IconButton(
+                        icon: const Icon(Icons.close,),
                         onPressed: () {},
                       ),
                       hintTextDirection: TextDirection.rtl,

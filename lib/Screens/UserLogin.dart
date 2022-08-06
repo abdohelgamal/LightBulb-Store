@@ -64,10 +64,10 @@ class UserLoginScreen extends StatelessWidget {
               const CustomTextfield('اسم المستخدم'),
               const CustomTextfield('كلمة المرور'),
               Align(
-                alignment: AlignmentDirectional.centerStart,
+                alignment: AlignmentDirectional.centerEnd,
                 child: TextButton(
                     onPressed: () {},
-                    child: const Text('هل نسيت كلمة المرور ؟',
+                    child: const Text('هل نسيت كلمة السر ؟',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600))),
               ),

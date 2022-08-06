@@ -11,11 +11,11 @@ class PhoneVerification extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset:false,
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 37,
+          padding: const  EdgeInsets.symmetric(
+           horizontal: 37
           ),
           alignment: Alignment.center,
           decoration: const BoxDecoration(
@@ -60,8 +60,8 @@ class PhoneVerification extends StatelessWidget {
               Container( //TODO: customize this textfield more
                 height: 50,
                 margin: const EdgeInsets.symmetric(vertical: 15),
-                child: TextField(
-                  decoration: InputDecoration(
+                child: TextField(textAlign: TextAlign.center,
+                  decoration: InputDecoration(hintStyle: TextStyle(fontSize: 14),
                       hintText: 'رقم الهاتف',
                       suffixIcon: IconButton(
                         icon: const Icon(Icons.close),

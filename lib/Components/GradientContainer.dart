@@ -24,19 +24,8 @@ class _GradientContainerState extends State<GradientContainer> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(
+         SizedBox(
             width: 80,
-            child: TextButton.icon(
-                style: ButtonStyle(
-                    foregroundColor: MaterialStateProperty.all(Colors.white)),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: RotatedBox(
-                  quarterTurns: 2,
-                  child: Icon(Icons.play_arrow),
-                ),
-                label: Text('رجوع')),
           ),
           Container(
             decoration: BoxDecoration(
@@ -46,10 +35,21 @@ class _GradientContainerState extends State<GradientContainer> {
               widget.text,
               style: TextStyle(color: Colors.white),
             ),
-          ),
-          SizedBox(
+          ), SizedBox(
             width: 80,
-          )
+            child: TextButton.icon(
+                style: ButtonStyle(
+                    foregroundColor: MaterialStateProperty.all(Colors.white)),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                label: RotatedBox(
+                  quarterTurns: 2,
+                  child: Icon(Icons.play_arrow),
+                ),
+                icon: Text('رجوع')),
+          ),
+          
         ],
       ),
     );

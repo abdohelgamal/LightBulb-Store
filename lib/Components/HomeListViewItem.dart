@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/Screens/ChooseLocation.dart';
 
-class ListviewItem extends StatelessWidget {
-  const ListviewItem({Key? key}) : super(key: key);
+class HomeListviewItem extends StatelessWidget {
+  const HomeListviewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

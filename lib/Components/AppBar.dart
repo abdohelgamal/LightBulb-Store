@@ -22,7 +22,7 @@ class _MyAppBarState extends State<MyAppBar> {
       toolbarHeight: widget.bottom == null ? 65 : 130,
       backgroundColor: Colors.white,
       centerTitle: true,
-      leading: Padding(
+     actions : [Padding(
         padding: const EdgeInsets.all(20),
         child: Stack(
           alignment: Alignment.bottomRight,
@@ -35,12 +35,12 @@ class _MyAppBarState extends State<MyAppBar> {
             SvgPicture.asset('assets/gears.svg')
           ],
         ),
-      ),
+      )],
       title: const Text(
         'Logo',
         style: TextStyle(color: Colors.black),
       ),
-      actions: [
+      leading: 
         Row(
           children: [
             IconButton(
@@ -57,7 +57,7 @@ class _MyAppBarState extends State<MyAppBar> {
                 )),
           ],
         )
-      ],
+      ,
     );
   }
 }
