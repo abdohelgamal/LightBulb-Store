@@ -74,7 +74,7 @@ class OrderDetails extends StatelessWidget {
                       height: 160,
                       child: TextField(
                         textAlign: TextAlign.start,
-                        maxLines: 8,
+                        maxLines: 4,
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 16),

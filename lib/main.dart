@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ).copyWith(
         textTheme: GoogleFonts.cairoTextTheme(),
       ),
-      home: const UserLoginScreen(),
+      home: const Home(),
     );
   }
 }

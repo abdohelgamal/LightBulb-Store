@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/Components/Button.dart';
+import 'package:store_app/Screens/ChatScreen.dart';
 
 class OrderPostListViewItem extends StatelessWidget {
   const OrderPostListViewItem({Key? key}) : super(key: key);
@@ -62,17 +63,21 @@ class OrderPostListViewItem extends StatelessWidget {
           Divider(
             color: Color(0XFFAAAAAA),
           ),
-          Container(margin: const EdgeInsets.symmetric(vertical: 8),
-               height: 30,
+          Container(
+              margin: const EdgeInsets.symmetric(vertical: 8),
+              height: 30,
               width: MediaQuery.of(context).size.width * 0.5,
               child: CustomButton(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ChatScreen()));
+                },
                 decoration: ButtonStyle(
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(2))),
                     backgroundColor:
                         MaterialStateProperty.all(Color(0xFF70BCFF))),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10 ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 childWidget: Text(
                   'تواصل الان',
                   style: TextStyle(fontSize: 9),
