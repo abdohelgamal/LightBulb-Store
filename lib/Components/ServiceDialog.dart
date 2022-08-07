@@ -3,8 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:store_app/Components/Button.dart';
 
-class OrderDialog extends StatelessWidget {
-    OrderDialog({required this.widgets,required this.okFunction,
+class ServiceDialog extends StatelessWidget {
+  ServiceDialog({
+    required this.widgets,
+    required this.okFunction,
     Key? key,
   }) : super(key: key);
   void Function()? okFunction;
@@ -33,7 +35,7 @@ class OrderDialog extends StatelessWidget {
                       color: Color(0xFFFF0000),
                     )),
               ),
-             ...widgets,
+              ...widgets,
               SizedBox(
                 height: 38,
               ),
@@ -41,7 +43,8 @@ class OrderDialog extends StatelessWidget {
                   margin: const EdgeInsets.only(bottom: 18),
                   height: 28,
                   width: 93,
-                  child: CustomButton(onTap: okFunction ?? (){},
+                  child: CustomButton(
+                      onTap: okFunction ?? () {},
                       decoration: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all(Color(0xFF70BCFF)),

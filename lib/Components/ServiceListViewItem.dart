@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/Screens/ChooseLocation.dart';
 
-class HomeListviewItem extends StatelessWidget {
-  const HomeListviewItem({Key? key}) : super(key: key);
+class ServiceListViewItem extends StatelessWidget {
+  const ServiceListViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class HomeListviewItem extends StatelessWidget {
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ChoosLocation()));
+                MaterialPageRoute(builder: (context) => ChooseLocation()));
           },
           child: Container(
             height: 80,

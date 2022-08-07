@@ -43,16 +43,16 @@ class _MyAppBarState extends State<MyAppBar> {
       leading: 
         Row(
           children: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.shopping_cart,
-                  color: Color(0xFF0059A7),
-                )),
+           
             IconButton(
                 onPressed: () {},
                 icon: const Icon(
                   Icons.notifications,
+                  color: Color(0xFF0059A7),
+                )), IconButton(
+                onPressed: () {},
+                icon:  SvgPicture.asset(
+                  'assets/shoppingCart.svg',
                   color: Color(0xFF0059A7),
                 )),
           ],

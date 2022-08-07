@@ -5,16 +5,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:store_app/Components/AppBar.dart';
 import 'package:store_app/Components/Button.dart';
 import 'package:store_app/Components/GradientContainer.dart';
-import 'package:store_app/Screens/OrderDetails.dart';
+import 'package:store_app/Screens/ServiceDetails.dart';
 
-class ChoosLocation extends StatefulWidget {
-  ChoosLocation({Key? key}) : super(key: key);
+class ChooseLocation extends StatefulWidget {
+  ChooseLocation({Key? key}) : super(key: key);
 
   @override
-  State<ChoosLocation> createState() => _ChoosLocationState();
+  State<ChooseLocation> createState() => _ChooseLocationState();
 }
 
-class _ChoosLocationState extends State<ChoosLocation> {
+class _ChooseLocationState extends State<ChooseLocation> {
   late MapController controller;
 
   @override
@@ -36,7 +36,11 @@ class _ChoosLocationState extends State<ChoosLocation> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: true,
-            appBar: MyAppBar(bottom: GradientContainer(text: 'خدمة نجار',),),
+        appBar: MyAppBar(
+          bottom: GradientContainer(
+            text: 'خدمة نجار',
+          ),
+        ),
         body: SafeArea(
           child: Stack(
             children: [
@@ -57,7 +61,6 @@ class _ChoosLocationState extends State<ChoosLocation> {
                 ),
                 controller: controller,
               ),
-          
               Positioned(
                 bottom: 45,
                 child: Column(
@@ -68,13 +71,13 @@ class _ChoosLocationState extends State<ChoosLocation> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => OrderDetails()));
+                                builder: (context) => ServiceDetails()));
                       },
                       childWidget: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                         
-                        SvgPicture.asset('assets/locationConfirm.svg'),   Text(
+                          SvgPicture.asset('assets/locationConfirm.svg'),
+                          Text(
                             'تأكيد العنوان',
                           ),
                           SizedBox(),

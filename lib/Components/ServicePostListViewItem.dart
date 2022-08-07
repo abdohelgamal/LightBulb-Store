@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:store_app/Components/Button.dart';
 import 'package:store_app/Screens/ChatScreen.dart';
 
-class OrderPostListViewItem extends StatelessWidget {
-  const OrderPostListViewItem({Key? key}) : super(key: key);
+class ServicePostListViewItem extends StatelessWidget {
+  const ServicePostListViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

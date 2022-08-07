@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:store_app/Components/AppBar.dart';
-import 'package:store_app/Components/HomeListViewItem.dart';
+import 'package:store_app/Components/CategoryListViewItem.dart';
+import 'package:store_app/Components/ServiceListViewItem.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -112,8 +113,9 @@ class _HomeState extends State<Home> {
                         itemExtent: 92,
                         scrollDirection: Axis.horizontal,
                         children: List.generate(
-                            10, (index) => const HomeListviewItem()),
+                            10, (index) => const ServiceListViewItem()),
                       )),
+                  //TODO: customize this part later
                   Align(
                     alignment: Alignment.center,
                     child: Container(
@@ -130,24 +132,18 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(11),
                         color: Colors.cyan),
                   ),
-                  SizedBox(
-                      height: 145,
-                      child: ListView(
-                        padding: const EdgeInsets.only(top: 15),
-                        itemExtent: 92,
-                        scrollDirection: Axis.horizontal,
-                        children: List.generate(
-                            10, (index) => const HomeListviewItem()),
-                      )),
-                  SizedBox(
-                      height: 145,
-                      child: ListView(
-                        padding: const EdgeInsets.only(bottom: 15),
-                        itemExtent: 92,
-                        scrollDirection: Axis.horizontal,
-                        children: List.generate(
-                            10, (index) => const HomeListviewItem()),
-                      )),
+                  Wrap(
+                    spacing: 10,
+                    runSpacing: 20,
+                    alignment: WrapAlignment.center,
+                    runAlignment: WrapAlignment.center,
+                    // padding: const EdgeInsets.only(top: 15),
+                    // itemExtent: 92,
+                    // scrollDirection: Axis.horizontal,
+                    children: List.generate(
+                        8, (index) => const CategoryListViewItem()),
+                  ),
+
                   Container(
                     height: 100,
                     margin: const EdgeInsets.symmetric(vertical: 15),

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:store_app/Components/AppBar.dart';
 import 'package:store_app/Components/Button.dart';
-import 'package:store_app/Components/OrderDialog.dart';
+import 'package:store_app/Components/ServiceDialog.dart';
 import 'package:store_app/Components/GradientContainer.dart';
-import 'package:store_app/Screens/OrderPost.dart';
+import 'package:store_app/Screens/ServicePost.dart';
 
-class OrderDetails extends StatelessWidget {
-  const OrderDetails({Key? key}) : super(key: key);
+class ServiceDetails extends StatelessWidget {
+  const ServiceDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class OrderDetails extends StatelessWidget {
                     barrierDismissible: false,
                     context: context,
                     builder: ((context) {
-                      return OrderDialog(
+                      return ServiceDialog(
                         widgets: [
                           Text(
                             'تم ارسال بياناتك بنجاح',
@@ -44,7 +44,7 @@ class OrderDetails extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => OrderPost())));
+                                  builder: ((context) => ServicePost())));
                         },
                       );
                     }));
@@ -141,10 +141,11 @@ class OrderDetails extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(0),
                                 borderSide:
                                     BorderSide(color: Color(0xFFCECECE))))),
-               Padding(
-                 padding:const EdgeInsets.only(top: 40),
-                 child: Text('تحديد السعر'),
-               ),     Padding(
+                    Padding(
+                      padding: const EdgeInsets.only(top: 40),
+                      child: Text('تحديد السعر'),
+                    ),
+                    Padding(
                       padding: const EdgeInsets.only(bottom: 75),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

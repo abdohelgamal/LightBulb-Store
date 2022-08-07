@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:store_app/Components/AppBar.dart';
 import 'package:store_app/Components/GradientContainer.dart';
-import 'package:store_app/Components/OrderPostListViewItem.dart';
+import 'package:store_app/Components/ServicePostListViewItem.dart';
 
-class OrderPost extends StatelessWidget {
-  const OrderPost({Key? key}) : super(key: key);
+class ServicePost extends StatelessWidget {
+  const ServicePost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -159,11 +159,14 @@ class OrderPost extends StatelessWidget {
             ),
           ),
           Expanded(
-              child: ListView.separated(separatorBuilder:(context, index) =>  SizedBox(height: 10,),
+              child: ListView.separated(
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: 10,
+                      ),
                   itemCount: 5,
                   padding: const EdgeInsets.symmetric(horizontal: 19),
                   itemBuilder: (context, index) {
-                    return OrderPostListViewItem();
+                    return ServicePostListViewItem();
                   }))
         ],
       ),
