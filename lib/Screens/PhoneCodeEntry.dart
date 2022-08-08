@@ -62,7 +62,9 @@ class PhoneCodeEntry extends StatelessWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       prefixIcon: IconButton(
-                        icon: const Icon(Icons.close,),
+                        icon: const Icon(
+                          Icons.close,
+                        ),
                         onPressed: () {},
                       ),
                       hintTextDirection: TextDirection.rtl,
@@ -82,7 +84,6 @@ class PhoneCodeEntry extends StatelessWidget {
               ),
               CustomButton(
                 padding: const EdgeInsets.symmetric(vertical: 35),
-               
                 onTap: () {
                   Navigator.pushAndRemoveUntil(
                       context,

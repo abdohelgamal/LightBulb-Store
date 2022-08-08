@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomTextfield extends StatelessWidget {
- const CustomTextfield(
+  const CustomTextfield(
     this.hintText, {
     Key? key,
   }) : super(key: key);
 
- final String hintText;
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return Container(

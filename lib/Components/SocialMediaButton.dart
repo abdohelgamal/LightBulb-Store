@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocialMediaButton extends StatelessWidget {
-   SocialMediaButton({Key? key, required this.text, required this.svgPath,this.onTap})
+  SocialMediaButton(
+      {Key? key, required this.text, required this.svgPath, this.onTap})
       : super(key: key);
   final String text;
   final String svgPath;
@@ -11,7 +12,7 @@ class SocialMediaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:onTap ?? () {},
+      onTap: onTap ?? () {},
       child: Container(
         width: 100,
         padding: const EdgeInsets.symmetric(vertical: 5),
@@ -22,7 +23,7 @@ class SocialMediaButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           SvgPicture.asset(svgPath) ,
+            SvgPicture.asset(svgPath),
             SizedBox(
               width: 16,
             ),

@@ -53,11 +53,11 @@ class ChatScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),...List.generate(5, (index)  {
-                  if(index % 2 == 0){
+                ),
+                ...List.generate(5, (index) {
+                  if (index % 2 == 0) {
                     return ChatMessageMe();
-                    
-                  }else{
+                  } else {
                     return ChatMessageOther();
                   }
                 })

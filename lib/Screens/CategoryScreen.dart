@@ -48,7 +48,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(12,20,12,0),
+              padding: const EdgeInsetsDirectional.fromSTEB(12, 20, 12, 0),
               child: DraggableScrollbar(
                 alwaysVisibleScrollThumb: true,
                 controller: _scrollController,
@@ -66,9 +66,12 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 },
                 child: GridView.custom(
                   controller: _scrollController,
-                  padding: const EdgeInsets.symmetric(horizontal: 20),  
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(mainAxisSpacing: 60,mainAxisExtent: 160,
-                      crossAxisCount: 2, crossAxisSpacing: 60),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      mainAxisSpacing: 60,
+                      mainAxisExtent: 160,
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 60),
                   childrenDelegate: SliverChildListDelegate(
                     List.generate(
                       15,

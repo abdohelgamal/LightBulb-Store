@@ -6,7 +6,7 @@ class GradientContainer extends StatefulWidget implements PreferredSizeWidget {
         super(key: key);
   @override
   final Size preferredSize;
- final String text;
+  final String text;
   @override
   State<GradientContainer> createState() => _GradientContainerState();
 }
@@ -24,7 +24,7 @@ class _GradientContainerState extends State<GradientContainer> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-         SizedBox(
+          SizedBox(
             width: 80,
           ),
           Container(
@@ -35,7 +35,8 @@ class _GradientContainerState extends State<GradientContainer> {
               widget.text,
               style: TextStyle(color: Colors.white),
             ),
-          ), SizedBox(
+          ),
+          SizedBox(
             width: 80,
             child: TextButton.icon(
                 style: ButtonStyle(
@@ -49,7 +50,6 @@ class _GradientContainerState extends State<GradientContainer> {
                 ),
                 icon: Text('رجوع')),
           ),
-          
         ],
       ),
     );

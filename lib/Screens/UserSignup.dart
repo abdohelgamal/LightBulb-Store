@@ -66,7 +66,6 @@ class UserSignupScreen extends StatelessWidget {
               const CustomTextfield('اعادة ادخال الرقم السري'),
               CustomButton(
                 padding: const EdgeInsets.symmetric(vertical: 35),
-         
                 onTap: () {
                   Navigator.push(
                       context,

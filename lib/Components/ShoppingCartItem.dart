@@ -68,9 +68,8 @@ class ShoppingCartItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
-                width: 60 //MediaQuery.of(context).size.width * 0.15,
-              ),
+              SizedBox(width: 60 //MediaQuery.of(context).size.width * 0.15,
+                  ),
               SizedBox(
                   width: 120,
                   height: 28,

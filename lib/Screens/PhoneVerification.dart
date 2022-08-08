@@ -11,12 +11,10 @@ class PhoneVerification extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      resizeToAvoidBottomInset:false,
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
-          padding: const  EdgeInsets.symmetric(
-           horizontal: 37
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 37),
           alignment: Alignment.center,
           decoration: const BoxDecoration(
               image: DecorationImage(
@@ -57,11 +55,14 @@ class PhoneVerification extends StatelessWidget {
                       fontWeight: FontWeight.w600),
                 ),
               ),
-              Container( //TODO: customize this textfield more
+              Container(
+                //TODO: customize this textfield more
                 height: 50,
                 margin: const EdgeInsets.symmetric(vertical: 15),
-                child: TextField(textAlign: TextAlign.center,
-                  decoration: InputDecoration(hintStyle: TextStyle(fontSize: 14),
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                      hintStyle: TextStyle(fontSize: 14),
                       hintText: 'رقم الهاتف',
                       suffixIcon: IconButton(
                         icon: const Icon(Icons.close),
@@ -77,7 +78,6 @@ class PhoneVerification extends StatelessWidget {
               const CustomTextfield('البريد الالكتروني : اختياري'),
               CustomButton(
                 padding: const EdgeInsets.symmetric(vertical: 35),
-               
                 onTap: () {
                   Navigator.push(
                       context,
@@ -89,23 +89,23 @@ class PhoneVerification extends StatelessWidget {
               const Spacer(
                 flex: 3,
               ),
-              CustomButton(decoration: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                      shape: MaterialStateProperty.all(
-                          const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.zero)),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.white))),
-                  onTap: () {
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const UserLoginScreen()),
-                        (_) => false);
-                  },
-                  childWidget: const Text('انا لدي حساب بالفعل'),
-             
+              CustomButton(
+                decoration: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.transparent),
+                    shape: MaterialStateProperty.all(
+                        const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero)),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.white))),
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const UserLoginScreen()),
+                      (_) => false);
+                },
+                childWidget: const Text('انا لدي حساب بالفعل'),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),

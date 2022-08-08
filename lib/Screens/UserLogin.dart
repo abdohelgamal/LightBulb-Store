@@ -71,8 +71,8 @@ class UserLoginScreen extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w600))),
               ),
-              CustomButton(padding: const EdgeInsets.symmetric(vertical: 35),
-              
+              CustomButton(
+                padding: const EdgeInsets.symmetric(vertical: 35),
                 onTap: () {
                   Navigator.pushAndRemoveUntil(
                       context,
