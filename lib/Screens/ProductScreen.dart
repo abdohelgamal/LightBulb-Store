@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:store_app/Components/AppBar.dart';
 import 'package:store_app/Components/Button.dart';
 import 'package:store_app/Components/GradientContainer.dart';
+import 'package:store_app/Screens/ShoppingCartScreen.dart';
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({Key? key}) : super(key: key);
@@ -108,57 +109,66 @@ class ProductScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom:45),
+              padding: const EdgeInsets.only(bottom: 45),
               child: Text.rich(
                 TextSpan(
-                  text: ': اجمالي الحساب',
-                  style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
+                    text: ': اجمالي الحساب',
+                    style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                    children: [
+                      TextSpan(
+                          text: ' 150 ',
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold)),
+                      TextSpan(
+                          text: 'ج / م',
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold))
+                    ]),
+              ),
+            ),
+            CustomButton(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ShoppingCart()));
+                },
+                padding: const EdgeInsets.only(bottom: 25),
+                childWidget: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextSpan(
-                        text: ' 150 ',
-                        style: TextStyle(
-                            fontSize: 17,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold)),
-                    TextSpan(
-                        text: 'ج / م',
-                        style: TextStyle(
-                            fontSize: 17,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold))
-                  ]),
-                  ),
-            ),CustomButton(
-              padding: const  EdgeInsets.only(bottom: 25),
-              childWidget: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [ SizedBox(),Text('نقل الي السلة'),  SvgPicture.asset(
-                  'assets/shoppingCart.svg',
-                  color: Colors.white,
-                )],)),  Padding(
-                padding: const EdgeInsets.symmetric(vertical: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                   Text(
-                      'Lorem ipsum',
-                      style: TextStyle(
-                        fontSize: 8,
-                        color: Color(0xFF0059A7)),
-                    ) ,
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      Icons.error_outline,
-                      color: Color(0xFF0059A7),
-                    ),
+                    SizedBox(),
+                    Text('نقل الي السلة'),
+                    SvgPicture.asset(
+                      'assets/shoppingCart.svg',
+                      color: Colors.white,
+                    )
                   ],
-                ),
-              )
+                )),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'Lorem ipsum',
+                    style: TextStyle(fontSize: 8, color: Color(0xFF0059A7)),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.error_outline,
+                    color: Color(0xFF0059A7),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
